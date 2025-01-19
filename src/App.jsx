@@ -1,5 +1,6 @@
 import Background from "./Components/Background/Background";
-
+import React, { useState } from "react";
+import Navbar from "./Components/Navbar/Navbar";
 
 const App = () => {
 
@@ -9,12 +10,13 @@ const App = () => {
     {text1:"Give in to" , text2:"your passions"},
   ]
 
-  const[heroCount, setHeroCount] = useState(2);
+  const[heroCount, setHeroCount] = useState(0);
   const[playStatus, setPlayStatus] = useState(false);
 
   return (
     <div>
       <Background setPlayStatus={playStatus} heroCount={heroCount}/>
+      <Navbar/>
     </div>
   )
 }
