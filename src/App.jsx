@@ -1,3 +1,4 @@
+import Background from "./Components/Background/Background";
 
 
 const App = () => {
@@ -8,10 +9,12 @@ const App = () => {
     {text1:"Give in to" , text2:"your passions"},
   ]
 
+  const[heroCount, setHeroCount] = useState(2);
+  const[playStatus, setPlayStatus] = useState(false);
 
   return (
     <div>
-      
+      <Background setPlayStatus={playStatus} heroCount={heroCount}/>
     </div>
   )
 }
